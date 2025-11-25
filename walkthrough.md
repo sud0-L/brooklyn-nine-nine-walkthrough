@@ -1,4 +1,4 @@
-\TryHackMe Brooklyn-Nine-Nine Walkthrough
+TryHackMe Brooklyn-Nine-Nine Walkthrough
 
 First begin with nmapping the server once you've connected to identify the services and ports.
 
@@ -30,11 +30,11 @@ Notice that port 21 (ftp) and port 22 (SSH) is open, keep these in mind. It will
 
 In the meantime, let's take a look at the webserver. 
 
-< 3. navigating to website >
+<img width="2560" height="1440" alt="3  navigating to website" src="https://github.com/user-attachments/assets/b81a2fb3-8bce-468d-b644-850bdc81995c" />
 
 Make sure you scroll all the way down.
 
-< 4. text at the bottom of the webpage >
+<img width="1743" height="14" alt="4  text at bottom of webpage" src="https://github.com/user-attachments/assets/c65f1fbf-9c37-4e38-aefb-ea5b6e2129c9" />
 
 Let's see if we can extract any more information from this and run gobuster:
 
@@ -88,7 +88,7 @@ Looks like we have a successful sign on. Poke around and you'll find something c
 
 If we cat the contents of this note we find:
 
-< 10. note to jake >
+<img width="860" height="102" alt="10  note to jake" src="https://github.com/user-attachments/assets/9b9f50c9-5574-4039-9c67-29da638db827" />
 
 Okay, so we're working with a weak password, this might be something that Hydra can crack for us. 
 
@@ -102,11 +102,11 @@ hydra -l jake -P /usr/var/wordlists/seclists/Passwords/Leaked-Databases/rockyou.
 
 Gives us this output.
 
-< 15. running hydra against ssh jake >
+<img width="1251" height="224" alt="15  running hydra against ssh jake" src="https://github.com/user-attachments/assets/0df5e050-e197-43ec-b948-d05cc2adabd2" />
 
 After that we simply SSH into the machine via Jake's account:
 
-< 16. successful ssh >
+<img width="632" height="193" alt="16  successful ssh" src="https://github.com/user-attachments/assets/d18065e0-f605-4e22-a43a-10a93d545eb5" />
 
 Running the command:
 
@@ -141,7 +141,7 @@ nano.save user.txt
 
 user.txt will contain the first flag
 
-< 18. first flag >
+< 1<img width="382" height="37" alt="18  grabbing user flag" src="https://github.com/user-attachments/assets/5b1c11cd-16be-4374-8d88-3ee963f2cca2" />
 
 Now that we have the user flag, we need to root the machine. 
 
